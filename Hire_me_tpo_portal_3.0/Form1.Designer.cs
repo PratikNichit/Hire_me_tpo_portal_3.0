@@ -44,8 +44,6 @@
             this.iconCurrentChidForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.card2 = new Hire_me_tpo_portal_3._0.Card();
-            this.card1 = new Hire_me_tpo_portal_3._0.Card();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -55,7 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChidForm)).BeginInit();
-            this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -304,29 +301,11 @@
             // 
             // panelDesktop
             // 
-            this.panelDesktop.Controls.Add(this.card2);
-            this.panelDesktop.Controls.Add(this.card1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(295, 61);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1287, 857);
             this.panelDesktop.TabIndex = 4;
-            // 
-            // card2
-            // 
-            this.card2.BackColor = System.Drawing.Color.White;
-            this.card2.Location = new System.Drawing.Point(389, 22);
-            this.card2.Name = "card2";
-            this.card2.Size = new System.Drawing.Size(293, 356);
-            this.card2.TabIndex = 1;
-            // 
-            // card1
-            // 
-            this.card1.BackColor = System.Drawing.Color.White;
-            this.card1.Location = new System.Drawing.Point(41, 22);
-            this.card1.Name = "card1";
-            this.card1.Size = new System.Drawing.Size(293, 356);
-            this.card1.TabIndex = 0;
             // 
             // fileSystemWatcher1
             // 
@@ -357,7 +336,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChidForm)).EndInit();
-            this.panelDesktop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
 
@@ -381,8 +359,6 @@
         private FontAwesome.Sharp.IconPictureBox iconClose;
         private FontAwesome.Sharp.IconPictureBox iconFullScreen;
         private FontAwesome.Sharp.IconPictureBox iconMinimize;
-        private Card card2;
-        private Card card1;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
