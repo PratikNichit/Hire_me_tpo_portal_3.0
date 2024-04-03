@@ -77,6 +77,12 @@
     <Compile Include="DropDownMenu.Designer.cs">
       <DependentUpon>DropDownMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="educationCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="educationCard.Designer.cs">
+      <DependentUpon>educationCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DropDownMenu.resx">
       <DependentUpon>DropDownMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="educationCard.resx">
+      <DependentUpon>educationCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

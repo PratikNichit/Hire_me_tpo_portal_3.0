@@ -299,6 +299,7 @@
             this.iconSave.Text = "Save ";
             this.iconSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconSave.UseVisualStyleBackColor = false;
+            this.iconSave.Click += new System.EventHandler(this.iconSave_Click);
             // 
             // FormAcademics
             // 

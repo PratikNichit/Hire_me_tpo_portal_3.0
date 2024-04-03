@@ -58,5 +58,17 @@ namespace Hire_me_tpo_portal_3._0.Forms
             pursingInternship.Enabled = true;
             isPlaced.Enabled = true;
         }
+
+        private void iconSave_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+               pursingYear.Text+" "+
+               currentBackLogs.Value+" "+
+               deadBacklogs.Value+" "+
+               currentCGPA.Text+" "+
+               pursingInternship.Text+" "+
+               isPlaced.Text
+            );
+        }
     }
 }
