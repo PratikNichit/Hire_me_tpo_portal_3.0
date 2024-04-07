@@ -28,136 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.academicsPanel = new System.Windows.Forms.Panel();
-            this.currentCGPA = new System.Windows.Forms.TextBox();
-            this.deadBacklogs = new System.Windows.Forms.NumericUpDown();
-            this.currentBackLogs = new System.Windows.Forms.NumericUpDown();
-            this.pursingYear = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.iconSave = new FontAwesome.Sharp.IconButton();
+            this.iconEdit = new FontAwesome.Sharp.IconButton();
             this.educationCard1 = new Hire_me_tpo_portal_3._0.educationCard();
-            this.academicsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deadBacklogs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currentBackLogs)).BeginInit();
+            this.educationCard2 = new Hire_me_tpo_portal_3._0.educationCard();
+            this.educationCard3 = new Hire_me_tpo_portal_3._0.educationCard();
+            this.panelDesktop2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panelDesktop2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // academicsPanel
-            // 
-            this.academicsPanel.BackColor = System.Drawing.Color.White;
-            this.academicsPanel.Controls.Add(this.currentCGPA);
-            this.academicsPanel.Controls.Add(this.deadBacklogs);
-            this.academicsPanel.Controls.Add(this.currentBackLogs);
-            this.academicsPanel.Controls.Add(this.pursingYear);
-            this.academicsPanel.Controls.Add(this.label5);
-            this.academicsPanel.Controls.Add(this.label4);
-            this.academicsPanel.Controls.Add(this.label3);
-            this.academicsPanel.Controls.Add(this.label2);
-            this.academicsPanel.Controls.Add(this.panel1);
-            this.academicsPanel.Location = new System.Drawing.Point(74, 108);
-            this.academicsPanel.Name = "academicsPanel";
-            this.academicsPanel.Size = new System.Drawing.Size(576, 435);
-            this.academicsPanel.TabIndex = 1;
-            // 
-            // currentCGPA
-            // 
-            this.currentCGPA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.currentCGPA.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
-            this.currentCGPA.Location = new System.Drawing.Point(210, 352);
-            this.currentCGPA.Name = "currentCGPA";
-            this.currentCGPA.Size = new System.Drawing.Size(325, 38);
-            this.currentCGPA.TabIndex = 12;
-            // 
-            // deadBacklogs
-            // 
-            this.deadBacklogs.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
-            this.deadBacklogs.Location = new System.Drawing.Point(210, 267);
-            this.deadBacklogs.Name = "deadBacklogs";
-            this.deadBacklogs.Size = new System.Drawing.Size(325, 38);
-            this.deadBacklogs.TabIndex = 11;
-            // 
-            // currentBackLogs
-            // 
-            this.currentBackLogs.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
-            this.currentBackLogs.Location = new System.Drawing.Point(210, 193);
-            this.currentBackLogs.Name = "currentBackLogs";
-            this.currentBackLogs.Size = new System.Drawing.Size(325, 38);
-            this.currentBackLogs.TabIndex = 10;
-            // 
-            // pursingYear
-            // 
-            this.pursingYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pursingYear.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
-            this.pursingYear.Location = new System.Drawing.Point(210, 109);
-            this.pursingYear.Name = "pursingYear";
-            this.pursingYear.Size = new System.Drawing.Size(325, 38);
-            this.pursingYear.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 352);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(175, 27);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Current CGPA       :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 272);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 27);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Dead Backlogs     :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 192);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 27);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Current Backlogs :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 27);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Pursing year         :";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(110)))), ((int)(((byte)(254)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(576, 76);
-            this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Education";
             // 
             // iconButton1
             // 
@@ -171,12 +52,63 @@
             this.iconButton1.Text = "iconButton1";
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.iconSave);
+            this.panel1.Controls.Add(this.iconEdit);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 785);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1607, 76);
+            this.panel1.TabIndex = 4;
+            // 
+            // iconSave
+            // 
+            this.iconSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconSave.FlatAppearance.BorderSize = 0;
+            this.iconSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconSave.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.iconSave.IconColor = System.Drawing.Color.Black;
+            this.iconSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconSave.Location = new System.Drawing.Point(1482, 14);
+            this.iconSave.Margin = new System.Windows.Forms.Padding(5);
+            this.iconSave.Name = "iconSave";
+            this.iconSave.Size = new System.Drawing.Size(110, 48);
+            this.iconSave.TabIndex = 7;
+            this.iconSave.Text = "Save ";
+            this.iconSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconSave.UseVisualStyleBackColor = false;
+            this.iconSave.Click += new System.EventHandler(this.iconSave_Click);
+            // 
+            // iconEdit
+            // 
+            this.iconEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconEdit.BackColor = System.Drawing.Color.Salmon;
+            this.iconEdit.FlatAppearance.BorderSize = 0;
+            this.iconEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconEdit.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.iconEdit.IconColor = System.Drawing.Color.Black;
+            this.iconEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconEdit.Location = new System.Drawing.Point(1364, 14);
+            this.iconEdit.Margin = new System.Windows.Forms.Padding(5);
+            this.iconEdit.Name = "iconEdit";
+            this.iconEdit.Size = new System.Drawing.Size(105, 48);
+            this.iconEdit.TabIndex = 6;
+            this.iconEdit.Text = "Edit";
+            this.iconEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconEdit.UseVisualStyleBackColor = false;
+            this.iconEdit.Click += new System.EventHandler(this.iconEdit_Click);
+            // 
             // educationCard1
             // 
             this.educationCard1.BackColor = System.Drawing.Color.White;
             this.educationCard1.education = "SSC";
             this.educationCard1.institueName = "Prodigy Public School";
-            this.educationCard1.Location = new System.Drawing.Point(812, 108);
+            this.educationCard1.Location = new System.Drawing.Point(104, 25);
             this.educationCard1.Name = "educationCard1";
             this.educationCard1.passingYear = 2019;
             this.educationCard1.percentage = 78F;
@@ -184,40 +116,69 @@
             this.educationCard1.TabIndex = 3;
             this.educationCard1.university = "CBSC";
             // 
+            // educationCard2
+            // 
+            this.educationCard2.BackColor = System.Drawing.Color.White;
+            this.educationCard2.education = "SSC";
+            this.educationCard2.institueName = "Prodigy Public School";
+            this.educationCard2.Location = new System.Drawing.Point(892, 25);
+            this.educationCard2.Name = "educationCard2";
+            this.educationCard2.passingYear = 2019;
+            this.educationCard2.percentage = 78F;
+            this.educationCard2.Size = new System.Drawing.Size(525, 420);
+            this.educationCard2.TabIndex = 5;
+            this.educationCard2.university = "CBSC";
+            // 
+            // educationCard3
+            // 
+            this.educationCard3.BackColor = System.Drawing.Color.White;
+            this.educationCard3.education = "SSC";
+            this.educationCard3.institueName = "Prodigy Public School";
+            this.educationCard3.Location = new System.Drawing.Point(104, 483);
+            this.educationCard3.Name = "educationCard3";
+            this.educationCard3.passingYear = 2019;
+            this.educationCard3.percentage = 78F;
+            this.educationCard3.Size = new System.Drawing.Size(525, 420);
+            this.educationCard3.TabIndex = 6;
+            this.educationCard3.university = "CBSC";
+            // 
+            // panelDesktop2
+            // 
+            this.panelDesktop2.Controls.Add(this.educationCard3);
+            this.panelDesktop2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop2.Location = new System.Drawing.Point(0, 0);
+            this.panelDesktop2.Name = "panelDesktop2";
+            this.panelDesktop2.Size = new System.Drawing.Size(1607, 861);
+            this.panelDesktop2.TabIndex = 7;
+            // 
             // FormPastQualification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1607, 861);
+            this.Controls.Add(this.educationCard2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.educationCard1);
             this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.academicsPanel);
+            this.Controls.Add(this.panelDesktop2);
             this.Name = "FormPastQualification";
             this.Text = "Past Qualification";
-            this.academicsPanel.ResumeLayout(false);
-            this.academicsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deadBacklogs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currentBackLogs)).EndInit();
+            this.Load += new System.EventHandler(this.FormPastQualification_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelDesktop2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel academicsPanel;
-        private System.Windows.Forms.TextBox currentCGPA;
-        private System.Windows.Forms.NumericUpDown deadBacklogs;
-        private System.Windows.Forms.NumericUpDown currentBackLogs;
-        private System.Windows.Forms.TextBox pursingYear;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton iconButton1;
         private educationCard educationCard1;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton iconEdit;
+        private FontAwesome.Sharp.IconButton iconSave;
+        private educationCard educationCard2;
+        private educationCard educationCard3;
+        private System.Windows.Forms.Panel panelDesktop2;
     }
 }

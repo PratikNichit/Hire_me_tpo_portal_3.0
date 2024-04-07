@@ -116,52 +116,47 @@
             // 
             // Education
             // 
-            this.Education.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Education.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Education.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
             this.Education.Location = new System.Drawing.Point(227, 104);
             this.Education.Name = "Education";
-            this.Education.ReadOnly = true;
-            this.Education.Size = new System.Drawing.Size(275, 31);
+            this.Education.Size = new System.Drawing.Size(275, 38);
             this.Education.TabIndex = 10;
             // 
             // University
             // 
-            this.University.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.University.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.University.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
             this.University.Location = new System.Drawing.Point(227, 169);
             this.University.Name = "University";
-            this.University.ReadOnly = true;
-            this.University.Size = new System.Drawing.Size(275, 31);
+            this.University.Size = new System.Drawing.Size(275, 38);
             this.University.TabIndex = 11;
             // 
             // InstitueName
             // 
-            this.InstitueName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.InstitueName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.InstitueName.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
             this.InstitueName.Location = new System.Drawing.Point(227, 240);
             this.InstitueName.Name = "InstitueName";
-            this.InstitueName.ReadOnly = true;
-            this.InstitueName.Size = new System.Drawing.Size(275, 31);
+            this.InstitueName.Size = new System.Drawing.Size(275, 38);
             this.InstitueName.TabIndex = 12;
             // 
             // Percentage
             // 
-            this.Percentage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Percentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Percentage.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
             this.Percentage.Location = new System.Drawing.Point(227, 308);
             this.Percentage.Name = "Percentage";
-            this.Percentage.ReadOnly = true;
-            this.Percentage.Size = new System.Drawing.Size(275, 31);
+            this.Percentage.Size = new System.Drawing.Size(275, 38);
             this.Percentage.TabIndex = 13;
             // 
             // PassingYear
             // 
-            this.PassingYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PassingYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PassingYear.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
             this.PassingYear.Location = new System.Drawing.Point(227, 367);
             this.PassingYear.Name = "PassingYear";
-            this.PassingYear.ReadOnly = true;
-            this.PassingYear.Size = new System.Drawing.Size(275, 31);
+            this.PassingYear.Size = new System.Drawing.Size(275, 38);
             this.PassingYear.TabIndex = 14;
             // 
             // educationCard
