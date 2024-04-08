@@ -53,6 +53,42 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminForms\FormAddVacancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\FormAddVacancy.Designer.cs">
+      <DependentUpon>FormAddVacancy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\FormAdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\FormAdminDashboard.Designer.cs">
+      <DependentUpon>FormAdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\AdminHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\AdminHomePage.Designer.cs">
+      <DependentUpon>AdminHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\FormAddCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\FormAddCompany.Designer.cs">
+      <DependentUpon>FormAddCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\FormAdminProfileSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\FormAdminProfileSettings.Designer.cs">
+      <DependentUpon>FormAdminProfileSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\FormExportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\FormExportData.Designer.cs">
+      <DependentUpon>FormExportData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Card.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +185,18 @@
     <Compile Include="Forms\FormUploadCv.Designer.cs">
       <DependentUpon>FormUploadCv.cs</DependentUpon>
     </Compile>
+    <Compile Include="oneLineComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="oneLineComboBox.Designer.cs">
+      <DependentUpon>oneLineComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OneLineTextboxWithLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OneLineTextboxWithLabel.Designer.cs">
+      <DependentUpon>OneLineTextboxWithLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextboxWithLabel.cs">
@@ -157,6 +205,24 @@
     <Compile Include="TextboxWithLabel.Designer.cs">
       <DependentUpon>TextboxWithLabel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminForms\AdminHomePage.resx">
+      <DependentUpon>AdminHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\FormAddCompany.resx">
+      <DependentUpon>FormAddCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\FormAddVacancy.resx">
+      <DependentUpon>FormAddVacancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\FormAdminDashboard.resx">
+      <DependentUpon>FormAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\FormAdminProfileSettings.resx">
+      <DependentUpon>FormAdminProfileSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\FormExportData.resx">
+      <DependentUpon>FormExportData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +270,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormUploadCv.resx">
       <DependentUpon>FormUploadCv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oneLineComboBox.resx">
+      <DependentUpon>oneLineComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OneLineTextboxWithLabel.resx">
+      <DependentUpon>OneLineTextboxWithLabel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

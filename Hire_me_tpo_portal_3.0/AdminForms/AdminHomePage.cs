@@ -1,25 +1,24 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FontAwesome.Sharp;
-using Hire_me_tpo_portal_3._0.Forms;
 
-namespace Hire_me_tpo_portal_3._0
+namespace Hire_me_tpo_portal_3._0.AdminForms
 {
-    public partial class Form1 : Form
+    public partial class AdminHomePage : Form
     {
         // fields
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        public Form1()
+
+        public AdminHomePage()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -27,7 +26,7 @@ namespace Hire_me_tpo_portal_3._0
             panelMenu.Controls.Add(leftBorderBtn);
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             ActiveButton();
-            openChidForm(new Forms.FormDashBoard());
+            openChidForm(new AdminForms.FormAdminDashboard());
         }
 
         // Structur for RBG colors
@@ -70,23 +69,23 @@ namespace Hire_me_tpo_portal_3._0
         private void ActiveButton()
         {
 
-                currentBtn = (IconButton)Dashboard;
-                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
-                currentBtn.ForeColor = Color.FromArgb(0, 191, 159);
-                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = Color.FromArgb(0, 191, 159);
-                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+            currentBtn = (IconButton)Dashboard;
+            currentBtn.BackColor = Color.FromArgb(37, 36, 81);
+            currentBtn.ForeColor = Color.FromArgb(0, 191, 159);
+            currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+            currentBtn.IconColor = Color.FromArgb(0, 191, 159);
+            currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+            currentBtn.ImageAlign = ContentAlignment.MiddleRight;
 
-                // Left border button
-                leftBorderBtn.BackColor = Color.FromArgb(0, 191, 159);
-                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
-                leftBorderBtn.Visible = true;
-                leftBorderBtn.BringToFront();
+            // Left border button
+            leftBorderBtn.BackColor = Color.FromArgb(0, 191, 159);
+            leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
+            leftBorderBtn.Visible = true;
+            leftBorderBtn.BringToFront();
 
-                // Icon current chid form
-                iconCurrentChidForm.IconChar = currentBtn.IconChar;
-                iconCurrentChidForm.IconColor = Color.FromArgb(0, 191, 159);
+            // Icon current chid form
+            iconCurrentChidForm.IconChar = currentBtn.IconChar;
+            iconCurrentChidForm.IconColor = Color.FromArgb(0, 191, 159);
 
         }
 
@@ -106,7 +105,7 @@ namespace Hire_me_tpo_portal_3._0
 
         public void openChidForm(Form childForm)
         {
-            if(currentChildForm != null)
+            if (currentChildForm != null)
             {
                 currentChildForm.Close();
             }
@@ -119,75 +118,53 @@ namespace Hire_me_tpo_portal_3._0
             childForm.BringToFront();
             childForm.Show();
             labelTitleChidForm.Text = childForm.Text;
-            labelTitleChidForm.ForeColor = iconCurrentChidForm.ForeColor;
         }
 
+        private void AdminHomePage_Load(object sender, EventArgs e)
+        {
 
+        }
 
-        // Menu Buttons
         private void Dashboard_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGcolors.color1);
-            openChidForm(new Forms.FormDashBoard());
+            openChidForm(new AdminForms.FormAdminDashboard());
         }
 
-        private void sheheduled_companies_Click(object sender, EventArgs e)
+        private void AddCompany_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGcolors.color2);
-            openChidForm(new Forms.FormSheheduledCompanies());
+            openChidForm(new AdminForms.FormAddCompany());
         }
 
-        private void companies_dashboard_Click(object sender, EventArgs e)
+        private void AddVacancy_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGcolors.color3);
-            openChidForm(new Forms.FormCompaniesDashboard());
+            openChidForm(new AdminForms.FormAddVacancy());
         }
 
-        private void applied_companies_Click(object sender, EventArgs e)
+        private void ExportData_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGcolors.color4);
-            openChidForm(new Forms.FormAppliedCompanies());
+            openChidForm(new AdminForms.FormExportData());
         }
 
-        private void profile_Click(object sender, EventArgs e)
+        private void profileSetting_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGcolors.color5);
-            openChidForm(new Forms.FormProfileSetting());
+            openChidForm(new AdminForms.FormAdminProfileSettings());
         }
 
-        private void iconPictureBoxLogo_Click(object sender, EventArgs e)
-        {
-            if(currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            Reset();
-        }
-        private void Reset()
-        {
-            DisableButton();
-            leftBorderBtn.Visible = false;
-            iconCurrentChidForm.IconChar = IconChar.Home;
-            iconCurrentChidForm.IconColor = Color.FromArgb(0, 191, 159);
-            labelTitleChidForm.Text = "Dashboard";
-        }
-
-
-     // Title Bar Control button
-
-        // close button
         private void iconClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        // Minimize button
         private void iconMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        // maximize Button
         private void iconFullScreen_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
