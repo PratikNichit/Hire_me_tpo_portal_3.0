@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.AboutPanel = new System.Windows.Forms.Panel();
+            this.aboutType = new System.Windows.Forms.Label();
+            this.userIcon = new FontAwesome.Sharp.IconPictureBox();
+            this.aboutEmail = new System.Windows.Forms.Label();
             this.profile = new FontAwesome.Sharp.IconButton();
             this.applied_companies = new FontAwesome.Sharp.IconButton();
             this.companies_dashboard = new FontAwesome.Sharp.IconButton();
@@ -46,6 +50,8 @@
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panelMenu.SuspendLayout();
+            this.AboutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxLogo)).BeginInit();
             this.panelTittleBar.SuspendLayout();
@@ -59,6 +65,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(110)))), ((int)(((byte)(254)))));
+            this.panelMenu.Controls.Add(this.AboutPanel);
             this.panelMenu.Controls.Add(this.profile);
             this.panelMenu.Controls.Add(this.applied_companies);
             this.panelMenu.Controls.Add(this.companies_dashboard);
@@ -70,6 +77,53 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(295, 918);
             this.panelMenu.TabIndex = 1;
+            // 
+            // AboutPanel
+            // 
+            this.AboutPanel.BackColor = System.Drawing.Color.White;
+            this.AboutPanel.Controls.Add(this.aboutType);
+            this.AboutPanel.Controls.Add(this.userIcon);
+            this.AboutPanel.Controls.Add(this.aboutEmail);
+            this.AboutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AboutPanel.Location = new System.Drawing.Point(0, 842);
+            this.AboutPanel.Name = "AboutPanel";
+            this.AboutPanel.Size = new System.Drawing.Size(295, 76);
+            this.AboutPanel.TabIndex = 0;
+            // 
+            // aboutType
+            // 
+            this.aboutType.AutoSize = true;
+            this.aboutType.Font = new System.Drawing.Font("Segoe UI Variable Text", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutType.Location = new System.Drawing.Point(82, 39);
+            this.aboutType.Name = "aboutType";
+            this.aboutType.Size = new System.Drawing.Size(71, 22);
+            this.aboutType.TabIndex = 2;
+            this.aboutType.Text = "student";
+            // 
+            // userIcon
+            // 
+            this.userIcon.BackColor = System.Drawing.Color.White;
+            this.userIcon.ForeColor = System.Drawing.Color.Black;
+            this.userIcon.IconChar = FontAwesome.Sharp.IconChar.CircleUser;
+            this.userIcon.IconColor = System.Drawing.Color.Black;
+            this.userIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.userIcon.IconSize = 73;
+            this.userIcon.Location = new System.Drawing.Point(3, 10);
+            this.userIcon.Name = "userIcon";
+            this.userIcon.Size = new System.Drawing.Size(73, 79);
+            this.userIcon.TabIndex = 0;
+            this.userIcon.TabStop = false;
+            // 
+            // aboutEmail
+            // 
+            this.aboutEmail.AutoSize = true;
+            this.aboutEmail.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(159)))));
+            this.aboutEmail.Location = new System.Drawing.Point(82, 17);
+            this.aboutEmail.Name = "aboutEmail";
+            this.aboutEmail.Size = new System.Drawing.Size(157, 22);
+            this.aboutEmail.TabIndex = 1;
+            this.aboutEmail.Text = "pratik@gmail.com";
             // 
             // profile
             // 
@@ -328,6 +382,9 @@
             this.Text = "d";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelMenu.ResumeLayout(false);
+            this.AboutPanel.ResumeLayout(false);
+            this.AboutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxLogo)).EndInit();
             this.panelTittleBar.ResumeLayout(false);
@@ -360,6 +417,10 @@
         private FontAwesome.Sharp.IconPictureBox iconFullScreen;
         private FontAwesome.Sharp.IconPictureBox iconMinimize;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Panel AboutPanel;
+        private FontAwesome.Sharp.IconPictureBox userIcon;
+        private System.Windows.Forms.Label aboutType;
+        private System.Windows.Forms.Label aboutEmail;
     }
 }
 
