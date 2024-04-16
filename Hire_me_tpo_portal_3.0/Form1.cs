@@ -19,6 +19,8 @@ namespace Hire_me_tpo_portal_3._0
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        public Users user;
+
         public Form1()
         {
             InitializeComponent();
@@ -30,13 +32,27 @@ namespace Hire_me_tpo_portal_3._0
             openChidForm(new Forms.FormDashBoard());
         }
 
+        public Form1(Users users)
+        {
+            InitializeComponent();
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(7, 60);
+            panelMenu.Controls.Add(leftBorderBtn);
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            ActiveButton();
+            openChidForm(new Forms.FormDashBoard());
+            aboutEmail.Text = users.email_id.ToString();
+            aboutType.Text = users.user_type.ToString();
+            user = users;
+        }
+
         // Structur for RBG colors
         private struct RBGcolors
         {
             public static Color color1 = Color.FromArgb(0, 191, 159);
             public static Color color2 = Color.FromArgb(255, 108, 131);
             public static Color color3 = Color.FromArgb(129, 131, 255);
-            public static Color color4 = Color.FromArgb(211, 211, 211);
+            public static Color color4 = Color.FromArgb(235, 105, 73);
             public static Color color5 = Color.FromArgb(250, 191, 34);
 
         }
@@ -134,7 +150,7 @@ namespace Hire_me_tpo_portal_3._0
         private void sheheduled_companies_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGcolors.color2);
-            openChidForm(new Forms.FormSheheduledCompanies());
+            openChidForm(new Forms.FormSheheduledCompanies(user));
         }
 
         private void companies_dashboard_Click(object sender, EventArgs e)
@@ -146,7 +162,7 @@ namespace Hire_me_tpo_portal_3._0
         private void applied_companies_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGcolors.color4);
-            openChidForm(new Forms.FormAppliedCompanies());
+            openChidForm(new Forms.FormAppliedCompanies(user));
         }
 
         private void profile_Click(object sender, EventArgs e)

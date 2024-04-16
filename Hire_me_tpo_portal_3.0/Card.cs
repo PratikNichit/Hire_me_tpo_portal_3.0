@@ -70,7 +70,7 @@ namespace Hire_me_tpo_portal_3._0
             }
             set
             {
-                if(value == "Not Applied")
+                if(value == "not Applied")
                 {
                     labelAppliedStatus.Text = value;
                     labelAppliedStatus.ForeColor = Color.Red;

@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.flowDesktopPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // label1
+            // flowDesktopPanel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(142, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Applied Companies";
+            this.flowDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowDesktopPanel.Location = new System.Drawing.Point(0, 0);
+            this.flowDesktopPanel.Name = "flowDesktopPanel";
+            this.flowDesktopPanel.Padding = new System.Windows.Forms.Padding(20);
+            this.flowDesktopPanel.Size = new System.Drawing.Size(1607, 861);
+            this.flowDesktopPanel.TabIndex = 1;
             // 
             // FormAppliedCompanies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1607, 861);
+            this.Controls.Add(this.flowDesktopPanel);
             this.Name = "FormAppliedCompanies";
             this.Text = "APPLIED COMPANIES";
+            this.Load += new System.EventHandler(this.FormAppliedCompanies_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowDesktopPanel;
     }
 }

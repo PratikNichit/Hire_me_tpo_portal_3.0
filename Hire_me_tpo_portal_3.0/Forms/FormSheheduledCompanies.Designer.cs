@@ -36,6 +36,7 @@
             this.flowDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowDesktopPanel.Location = new System.Drawing.Point(0, 0);
             this.flowDesktopPanel.Name = "flowDesktopPanel";
+            this.flowDesktopPanel.Padding = new System.Windows.Forms.Padding(20);
             this.flowDesktopPanel.Size = new System.Drawing.Size(1607, 861);
             this.flowDesktopPanel.TabIndex = 0;
             // 
@@ -47,6 +48,7 @@
             this.Controls.Add(this.flowDesktopPanel);
             this.Name = "FormSheheduledCompanies";
             this.Text = "SCHEDULED COMPANIES";
+            this.Load += new System.EventHandler(this.FormSheheduledCompanies_Load);
             this.ResumeLayout(false);
 
         }

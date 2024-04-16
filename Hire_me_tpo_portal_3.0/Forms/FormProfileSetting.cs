@@ -29,8 +29,6 @@ namespace Hire_me_tpo_portal_3._0.Forms
             forms.Add(new FormPastQualification());
             forms.Add(new FormAddressDetails());
             forms.Add(new FormUploadCv());
-
-
             showCurrentFrom();
         }
 
@@ -79,7 +77,6 @@ namespace Hire_me_tpo_portal_3._0.Forms
             {
                 currentChlidFormNumber = 4;
                 showCurrentFrom();
-
             }
             showCurrentFrom();
         }

@@ -1,12 +1,17 @@
-﻿using System;
+﻿using Dapper;
+using MySql.Data.MySqlClient;
+using Mysqlx.Connection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Hire_me_tpo_portal_3._0
 {
@@ -29,22 +34,42 @@ namespace Hire_me_tpo_portal_3._0
             panel.Location = new System.Drawing.Point(panelX, panelY);
             SignInPanel.Location = new System.Drawing.Point((int)panelX, (int)panelY-150);
             loginButton.Focus();
+
         }
 
         private void loginButton_Click(object sender, EventArgs e)
-        {   
-            // login login and from Routing will be done 
-            if(email_id.Text == "pratik@gmail.com" && password.Text == "123456")
+        {
+            using (var connection  = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
             {
-                this.Hide();
-                Form1 form1 = new Form1();
-                form1.Show();
+                connection.Open();
+                var parameters = new { email = email_id.Text, pass = password.Text };
+                var user = connection.Query<Users>("hire_me.get_login_creads", parameters, commandType: CommandType.StoredProcedure);
+                user = user.ToList();
+
+                if(user.Count() == 0)
+                {
+                    password_error.Text = "invalid email id or password";
+                }
+
+                foreach(var user_data in user)
+                {
+                    // login login and from Routing will be done 
+                    if (email_id.Text == user_data.email_id && password.Text == user_data.password)
+                    {
+                        this.Hide();
+                        Form1 form1 = new Form1(user_data);
+                        form1.Show();
+                    }
+                    else
+                    {
+                        email_error.Text = "invalid email";
+                        password_error.Text = "invalid passowrd";
+                    }
+                }
+
+
             }
-            else
-            {
-                email_error.Text = "invalid email";
-                password_error.Text = "invalid passowrd";
-            }
+               
         }
 
         private void email_id_Enter(object sender, EventArgs e)
