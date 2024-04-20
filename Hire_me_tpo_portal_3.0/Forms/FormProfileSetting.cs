@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Dapper;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -19,17 +22,47 @@ namespace Hire_me_tpo_portal_3._0.Forms
         private Form currentForm = new FormPersonalDetails();
         private List<Form> forms = new List<Form>();
         public int currentChlidFormNumber=0;
+        public Users user;
+        public PersonalData personaldata1;
 
         // Array of Form
         public FormProfileSetting()
         {
             InitializeComponent();
-            forms.Add(new FormPersonalDetails());
-            forms.Add(new FormAcademics());
-            forms.Add(new FormPastQualification());
-            forms.Add(new FormAddressDetails());
+            forms.Add(new FormPersonalDetails(user,personaldata1));
+            forms.Add(new FormAcademics(user,personaldata1));
+            forms.Add(new FormPastQualification(user));
+            forms.Add(new FormAddressDetails(user,personaldata1));
             forms.Add(new FormUploadCv());
             showCurrentFrom();
+        }
+
+        public FormProfileSetting(Users user)
+        {
+            InitializeComponent();
+            loadData(user);
+            this.user = user;
+            forms.Add(new FormPersonalDetails(user,personaldata1));
+            forms.Add(new FormAcademics(user, personaldata1));
+            forms.Add(new FormPastQualification(user));
+            forms.Add(new FormAddressDetails(user,personaldata1));
+            forms.Add(new FormUploadCv());
+            showCurrentFrom();
+        }
+
+        public void loadData(Users user)
+        {
+            using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
+            {
+                connection.Open();
+                var parameters = new { key_value = user.key_value };
+                var personaldata = connection.Query<PersonalData>("hire_me.get_personal_details;", parameters, commandType: CommandType.StoredProcedure);
+                personaldata = personaldata.ToList();
+                foreach(PersonalData personal in personaldata)
+                {
+                    personaldata1 = personal;
+                }
+            }
         }
 
 

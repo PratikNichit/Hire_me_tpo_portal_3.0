@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.academicsPanel = new System.Windows.Forms.Panel();
+            this.currentCGPA = new System.Windows.Forms.TextBox();
+            this.deadBacklogs = new System.Windows.Forms.NumericUpDown();
+            this.currentBackLogs = new System.Windows.Forms.NumericUpDown();
+            this.pursingYear = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pursingYear = new System.Windows.Forms.TextBox();
-            this.currentBackLogs = new System.Windows.Forms.NumericUpDown();
-            this.deadBacklogs = new System.Windows.Forms.NumericUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.isPlaced = new System.Windows.Forms.ComboBox();
+            this.pursingInternship = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pursingInternship = new System.Windows.Forms.ComboBox();
-            this.isPlaced = new System.Windows.Forms.ComboBox();
-            this.currentCGPA = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.iconEdit = new FontAwesome.Sharp.IconButton();
             this.iconSave = new FontAwesome.Sharp.IconButton();
             this.academicsPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.currentBackLogs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deadBacklogs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentBackLogs)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -75,6 +75,80 @@
             this.academicsPanel.Size = new System.Drawing.Size(576, 435);
             this.academicsPanel.TabIndex = 0;
             // 
+            // currentCGPA
+            // 
+            this.currentCGPA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.currentCGPA.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
+            this.currentCGPA.Location = new System.Drawing.Point(210, 352);
+            this.currentCGPA.Name = "currentCGPA";
+            this.currentCGPA.Size = new System.Drawing.Size(325, 38);
+            this.currentCGPA.TabIndex = 12;
+            // 
+            // deadBacklogs
+            // 
+            this.deadBacklogs.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
+            this.deadBacklogs.Location = new System.Drawing.Point(210, 267);
+            this.deadBacklogs.Name = "deadBacklogs";
+            this.deadBacklogs.Size = new System.Drawing.Size(325, 38);
+            this.deadBacklogs.TabIndex = 11;
+            // 
+            // currentBackLogs
+            // 
+            this.currentBackLogs.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
+            this.currentBackLogs.Location = new System.Drawing.Point(210, 193);
+            this.currentBackLogs.Name = "currentBackLogs";
+            this.currentBackLogs.Size = new System.Drawing.Size(325, 38);
+            this.currentBackLogs.TabIndex = 10;
+            // 
+            // pursingYear
+            // 
+            this.pursingYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pursingYear.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
+            this.pursingYear.Location = new System.Drawing.Point(210, 109);
+            this.pursingYear.Name = "pursingYear";
+            this.pursingYear.Size = new System.Drawing.Size(325, 38);
+            this.pursingYear.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(17, 352);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(175, 27);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Current CGPA       :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 272);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(176, 27);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Dead Backlogs     :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 192);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 27);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Current Backlogs :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(17, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 27);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Pursing year         :";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(110)))), ((int)(((byte)(254)))));
@@ -96,71 +170,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Academics Details";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 27);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Pursing year         :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 192);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 27);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Current Backlogs :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 272);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 27);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Dead Backlogs     :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 352);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(175, 27);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Current CGPA       :";
-            // 
-            // pursingYear
-            // 
-            this.pursingYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pursingYear.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
-            this.pursingYear.Location = new System.Drawing.Point(210, 109);
-            this.pursingYear.Name = "pursingYear";
-            this.pursingYear.Size = new System.Drawing.Size(325, 38);
-            this.pursingYear.TabIndex = 9;
-            // 
-            // currentBackLogs
-            // 
-            this.currentBackLogs.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
-            this.currentBackLogs.Location = new System.Drawing.Point(210, 193);
-            this.currentBackLogs.Name = "currentBackLogs";
-            this.currentBackLogs.Size = new System.Drawing.Size(325, 38);
-            this.currentBackLogs.TabIndex = 10;
-            // 
-            // deadBacklogs
-            // 
-            this.deadBacklogs.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
-            this.deadBacklogs.Location = new System.Drawing.Point(210, 267);
-            this.deadBacklogs.Name = "deadBacklogs";
-            this.deadBacklogs.Size = new System.Drawing.Size(325, 38);
-            this.deadBacklogs.TabIndex = 11;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -173,6 +182,42 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(576, 435);
             this.panel2.TabIndex = 13;
+            // 
+            // isPlaced
+            // 
+            this.isPlaced.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.isPlaced.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
+            this.isPlaced.FormattingEnabled = true;
+            this.isPlaced.Items.AddRange(new object[] {
+            "No",
+            "Yes"});
+            this.isPlaced.Location = new System.Drawing.Point(290, 180);
+            this.isPlaced.Name = "isPlaced";
+            this.isPlaced.Size = new System.Drawing.Size(269, 39);
+            this.isPlaced.TabIndex = 4;
+            // 
+            // pursingInternship
+            // 
+            this.pursingInternship.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pursingInternship.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
+            this.pursingInternship.FormattingEnabled = true;
+            this.pursingInternship.Items.AddRange(new object[] {
+            "No",
+            "Yes"});
+            this.pursingInternship.Location = new System.Drawing.Point(290, 104);
+            this.pursingInternship.Name = "pursingInternship";
+            this.pursingInternship.Size = new System.Drawing.Size(269, 39);
+            this.pursingInternship.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(17, 180);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(267, 27);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Are you Placed                       :";
             // 
             // label9
             // 
@@ -204,51 +249,6 @@
             this.label10.Size = new System.Drawing.Size(207, 29);
             this.label10.TabIndex = 0;
             this.label10.Text = "Placement Details";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 180);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(267, 27);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Are you Placed                       :";
-            // 
-            // pursingInternship
-            // 
-            this.pursingInternship.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pursingInternship.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
-            this.pursingInternship.FormattingEnabled = true;
-            this.pursingInternship.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.pursingInternship.Location = new System.Drawing.Point(290, 104);
-            this.pursingInternship.Name = "pursingInternship";
-            this.pursingInternship.Size = new System.Drawing.Size(269, 39);
-            this.pursingInternship.TabIndex = 3;
-            // 
-            // isPlaced
-            // 
-            this.isPlaced.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.isPlaced.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
-            this.isPlaced.FormattingEnabled = true;
-            this.isPlaced.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.isPlaced.Location = new System.Drawing.Point(290, 180);
-            this.isPlaced.Name = "isPlaced";
-            this.isPlaced.Size = new System.Drawing.Size(269, 39);
-            this.isPlaced.TabIndex = 4;
-            // 
-            // currentCGPA
-            // 
-            this.currentCGPA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.currentCGPA.Font = new System.Drawing.Font("Segoe UI Variable Small", 13.8F);
-            this.currentCGPA.Location = new System.Drawing.Point(210, 352);
-            this.currentCGPA.Name = "currentCGPA";
-            this.currentCGPA.Size = new System.Drawing.Size(325, 38);
-            this.currentCGPA.TabIndex = 12;
             // 
             // panel4
             // 
@@ -311,12 +311,13 @@
             this.Controls.Add(this.academicsPanel);
             this.Name = "FormAcademics";
             this.Text = "Academics";
+            this.Load += new System.EventHandler(this.FormAcademics_Load);
             this.academicsPanel.ResumeLayout(false);
             this.academicsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deadBacklogs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentBackLogs)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.currentBackLogs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deadBacklogs)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);

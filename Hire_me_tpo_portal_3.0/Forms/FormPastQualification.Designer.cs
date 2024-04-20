@@ -106,41 +106,41 @@
             // educationCard1
             // 
             this.educationCard1.BackColor = System.Drawing.Color.White;
-            this.educationCard1.education = "SSC";
-            this.educationCard1.institueName = "Prodigy Public School";
+            this.educationCard1.education = "";
+            this.educationCard1.institueName = "";
             this.educationCard1.Location = new System.Drawing.Point(104, 25);
             this.educationCard1.Name = "educationCard1";
-            this.educationCard1.passingYear = 2019;
-            this.educationCard1.percentage = 78F;
+            this.educationCard1.passingYear = 0;
+            this.educationCard1.percentage = 0F;
             this.educationCard1.Size = new System.Drawing.Size(525, 420);
             this.educationCard1.TabIndex = 3;
-            this.educationCard1.university = "CBSC";
+            this.educationCard1.university = "";
             // 
             // educationCard2
             // 
             this.educationCard2.BackColor = System.Drawing.Color.White;
-            this.educationCard2.education = "SSC";
-            this.educationCard2.institueName = "Prodigy Public School";
+            this.educationCard2.education = "";
+            this.educationCard2.institueName = "";
             this.educationCard2.Location = new System.Drawing.Point(892, 25);
             this.educationCard2.Name = "educationCard2";
-            this.educationCard2.passingYear = 2019;
-            this.educationCard2.percentage = 78F;
+            this.educationCard2.passingYear = 0;
+            this.educationCard2.percentage = 0F;
             this.educationCard2.Size = new System.Drawing.Size(525, 420);
             this.educationCard2.TabIndex = 5;
-            this.educationCard2.university = "CBSC";
+            this.educationCard2.university = "";
             // 
             // educationCard3
             // 
             this.educationCard3.BackColor = System.Drawing.Color.White;
-            this.educationCard3.education = "SSC";
-            this.educationCard3.institueName = "Prodigy Public School";
+            this.educationCard3.education = "";
+            this.educationCard3.institueName = "";
             this.educationCard3.Location = new System.Drawing.Point(104, 483);
             this.educationCard3.Name = "educationCard3";
-            this.educationCard3.passingYear = 2019;
-            this.educationCard3.percentage = 78F;
+            this.educationCard3.passingYear = 0;
+            this.educationCard3.percentage = 0F;
             this.educationCard3.Size = new System.Drawing.Size(525, 420);
             this.educationCard3.TabIndex = 6;
-            this.educationCard3.university = "CBSC";
+            this.educationCard3.university = "";
             // 
             // panelDesktop2
             // 

@@ -1,6 +1,6 @@
 ﻿namespace Hire_me_tpo_portal_3._0
 {
-    partial class DatePickerWithLabel
+    partial class ComboBoxWithLabel
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.placeholder = new System.Windows.Forms.Label();
-            this.datepicker = new System.Windows.Forms.DateTimePicker();
+            this.combobox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // placeholder
@@ -39,27 +39,32 @@
             this.placeholder.ForeColor = System.Drawing.Color.White;
             this.placeholder.Location = new System.Drawing.Point(24, 18);
             this.placeholder.Name = "placeholder";
-            this.placeholder.Size = new System.Drawing.Size(99, 27);
-            this.placeholder.TabIndex = 5;
-            this.placeholder.Text = "Birth Date";
+            this.placeholder.Size = new System.Drawing.Size(71, 27);
+            this.placeholder.TabIndex = 6;
+            this.placeholder.Text = "Branch";
             // 
-            // datepicker
+            // combobox
             // 
-            this.datepicker.CustomFormat = "YYYY-mm-DD";
-            this.datepicker.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datepicker.Location = new System.Drawing.Point(26, 58);
-            this.datepicker.Name = "datepicker";
-            this.datepicker.Size = new System.Drawing.Size(328, 34);
-            this.datepicker.TabIndex = 6;
+            this.combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox.Font = new System.Drawing.Font("Segoe UI Variable Small", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combobox.FormattingEnabled = true;
+            this.combobox.Items.AddRange(new object[] {
+            "Male ",
+            "Female",
+            "Others"});
+            this.combobox.Location = new System.Drawing.Point(27, 57);
+            this.combobox.Name = "combobox";
+            this.combobox.Size = new System.Drawing.Size(328, 48);
+            this.combobox.TabIndex = 5;
             // 
-            // DatePickerWithLabel
+            // ComboBoxWithLabel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(110)))), ((int)(((byte)(254)))));
-            this.Controls.Add(this.datepicker);
             this.Controls.Add(this.placeholder);
-            this.Name = "DatePickerWithLabel";
+            this.Controls.Add(this.combobox);
+            this.Name = "ComboBoxWithLabel";
             this.Size = new System.Drawing.Size(379, 123);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -69,6 +74,6 @@
         #endregion
 
         private System.Windows.Forms.Label placeholder;
-        private System.Windows.Forms.DateTimePicker datepicker;
+        private System.Windows.Forms.ComboBox combobox;
     }
 }

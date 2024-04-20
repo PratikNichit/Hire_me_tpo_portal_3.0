@@ -144,6 +144,7 @@
     <Compile Include="AdminForms\FormExportData.Designer.cs">
       <DependentUpon>FormExportData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Branches.cs" />
     <Compile Include="Card.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +152,12 @@
       <DependentUpon>Card.cs</DependentUpon>
     </Compile>
     <Compile Include="CardData.cs" />
+    <Compile Include="ComboBoxWithLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComboBoxWithLabel.Designer.cs">
+      <DependentUpon>ComboBoxWithLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompanyInfo.cs" />
     <Compile Include="DatePickerWithLabel.cs">
       <SubType>UserControl</SubType>
@@ -260,6 +267,7 @@
     <Compile Include="OneLineTextboxWithLabel.Designer.cs">
       <DependentUpon>OneLineTextboxWithLabel.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonalData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextboxWithLabel.cs">
@@ -289,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComboBoxWithLabel.resx">
+      <DependentUpon>ComboBoxWithLabel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DatePickerWithLabel.resx">
       <DependentUpon>DatePickerWithLabel.cs</DependentUpon>
@@ -373,6 +384,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\functions\" />
+    <Folder Include="Database\Store_procedure\" />
+    <Folder Include="Database\triggers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

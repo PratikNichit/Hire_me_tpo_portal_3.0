@@ -1,6 +1,11 @@
-﻿using System;
+﻿using Dapper;
+using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.X509;
+using Org.BouncyCastle.Asn1.X509.SigI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -14,10 +19,14 @@ namespace Hire_me_tpo_portal_3._0.Forms
     {
         //fields
         private bool isClicked = true;
-        public FormAcademics()
+        public Users user;
+        public PersonalData personalData;
+        public FormAcademics(Users user, PersonalData personalData)
         {
+            this.user = user;
             InitializeComponent();
             disableAll();
+            this.personalData = personalData;
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,6 +78,37 @@ namespace Hire_me_tpo_portal_3._0.Forms
                pursingInternship.Text+" "+
                isPlaced.Text
             );
+
+            using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
+            {
+                connection.Open();
+                var parameters = new
+                {
+                    prn_number = user.key_value,
+                    pursuing_year = int.Parse(pursingYear.Text),
+                    current_backlog = currentBackLogs.Value,
+                    dead_backlog = deadBacklogs.Value,
+                    current_cgpa = float.Parse(currentCGPA.Text),
+                    pursing_internship = pursingInternship.SelectedIndex,
+                    is_placed  = isPlaced.SelectedIndex,
+                };
+                connection.Execute("hire_me.add_academic_details", parameters, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        // form on load 
+        private void FormAcademics_Load(object sender, EventArgs e)
+        {
+            if (personalData != null)
+            {
+                pursingYear.Text = personalData.pursuing_year.ToString();
+                currentBackLogs.Value = personalData.current_backlog;
+                deadBacklogs.Value = personalData.dead_backlog;
+                currentCGPA.Text = personalData.current_cgpa.ToString();
+                pursingInternship.SelectedIndex = personalData.pursing_internship;
+                isPlaced.SelectedIndex = personalData.is_placed;
+            }
+
         }
     }
 }

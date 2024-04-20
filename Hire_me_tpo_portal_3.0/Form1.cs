@@ -168,7 +168,7 @@ namespace Hire_me_tpo_portal_3._0
         private void profile_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGcolors.color5);
-            openChidForm(new Forms.FormProfileSetting());
+            openChidForm(new Forms.FormProfileSetting(user));
         }
 
         private void iconPictureBoxLogo_Click(object sender, EventArgs e)

@@ -28,24 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPersonalDetails));
             this.bottonPanel = new System.Windows.Forms.Panel();
             this.iconEdit = new FontAwesome.Sharp.IconButton();
             this.iconSave = new FontAwesome.Sharp.IconButton();
+            this.RenderPanel = new System.Windows.Forms.Panel();
+            this.branchTextbox = new Hire_me_tpo_portal_3._0.ComboBoxWithLabel();
+            this.isSeda = new Hire_me_tpo_portal_3._0.downMenu();
+            this.pancardNumber = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
+            this.adharCardNumber = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
+            this.alternateNumber = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
+            this.personalEmail = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
+            this.contactNumber = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
+            this.nationalaity = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
+            this.birthdate = new Hire_me_tpo_portal_3._0.DatePickerWithLabel();
             this.lastName = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
             this.middleName = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
             this.firstName = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
-            this.isSeda = new Hire_me_tpo_portal_3._0.downMenu();
             this.gender = new Hire_me_tpo_portal_3._0.DropDownMenu();
             this.prnNumber = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
-            this.birthdate = new Hire_me_tpo_portal_3._0.DatePickerWithLabel();
-            this.nationalaity = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
-            this.contactNumber = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
-            this.personalEmail = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
-            this.alternateNumber = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
-            this.adharCardNumber = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
-            this.pancardNumber = new Hire_me_tpo_portal_3._0.TextboxWithLabel();
-            this.RenderPanel = new System.Windows.Forms.Panel();
             this.bottonPanel.SuspendLayout();
+            this.RenderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // bottonPanel
@@ -99,6 +102,111 @@
             this.iconSave.UseVisualStyleBackColor = false;
             this.iconSave.Click += new System.EventHandler(this.iconSave_Click);
             // 
+            // RenderPanel
+            // 
+            this.RenderPanel.Controls.Add(this.branchTextbox);
+            this.RenderPanel.Controls.Add(this.isSeda);
+            this.RenderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RenderPanel.Location = new System.Drawing.Point(0, 0);
+            this.RenderPanel.Name = "RenderPanel";
+            this.RenderPanel.Size = new System.Drawing.Size(1607, 861);
+            this.RenderPanel.TabIndex = 29;
+            // 
+            // branchTextbox
+            // 
+            this.branchTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(110)))), ((int)(((byte)(254)))));
+            this.branchTextbox.ListItems = ((System.Collections.Generic.List<string>)(resources.GetObject("branchTextbox.ListItems")));
+            this.branchTextbox.Location = new System.Drawing.Point(12, 336);
+            this.branchTextbox.Name = "branchTextbox";
+            this.branchTextbox.PlaceHolder = "Branch";
+            this.branchTextbox.Size = new System.Drawing.Size(379, 123);
+            this.branchTextbox.TabIndex = 19;
+            // 
+            // isSeda
+            // 
+            this.isSeda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
+            this.isSeda.Location = new System.Drawing.Point(413, 486);
+            this.isSeda.Name = "isSeda";
+            this.isSeda.PlaceholderName = "Are you a Seda Student ?";
+            this.isSeda.Size = new System.Drawing.Size(379, 123);
+            this.isSeda.TabIndex = 18;
+            this.isSeda.TextboxValue = -1;
+            // 
+            // pancardNumber
+            // 
+            this.pancardNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
+            this.pancardNumber.Location = new System.Drawing.Point(12, 486);
+            this.pancardNumber.Name = "pancardNumber";
+            this.pancardNumber.PlaceholderName = "Pancard Number";
+            this.pancardNumber.Size = new System.Drawing.Size(379, 123);
+            this.pancardNumber.TabIndex = 28;
+            this.pancardNumber.TextboxValue = "";
+            this.pancardNumber.value = false;
+            // 
+            // adharCardNumber
+            // 
+            this.adharCardNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
+            this.adharCardNumber.Location = new System.Drawing.Point(1216, 336);
+            this.adharCardNumber.Name = "adharCardNumber";
+            this.adharCardNumber.PlaceholderName = "Adhar Card Number";
+            this.adharCardNumber.Size = new System.Drawing.Size(379, 123);
+            this.adharCardNumber.TabIndex = 27;
+            this.adharCardNumber.TextboxValue = "";
+            this.adharCardNumber.value = false;
+            // 
+            // alternateNumber
+            // 
+            this.alternateNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
+            this.alternateNumber.Location = new System.Drawing.Point(814, 336);
+            this.alternateNumber.Name = "alternateNumber";
+            this.alternateNumber.PlaceholderName = "Alternate Contact Number";
+            this.alternateNumber.Size = new System.Drawing.Size(379, 123);
+            this.alternateNumber.TabIndex = 26;
+            this.alternateNumber.TextboxValue = "";
+            this.alternateNumber.value = false;
+            // 
+            // personalEmail
+            // 
+            this.personalEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
+            this.personalEmail.Location = new System.Drawing.Point(413, 336);
+            this.personalEmail.Name = "personalEmail";
+            this.personalEmail.PlaceholderName = "Personal Email Id";
+            this.personalEmail.Size = new System.Drawing.Size(379, 123);
+            this.personalEmail.TabIndex = 25;
+            this.personalEmail.TextboxValue = "";
+            this.personalEmail.value = false;
+            // 
+            // contactNumber
+            // 
+            this.contactNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
+            this.contactNumber.Location = new System.Drawing.Point(1216, 184);
+            this.contactNumber.Name = "contactNumber";
+            this.contactNumber.PlaceholderName = "Contact Number";
+            this.contactNumber.Size = new System.Drawing.Size(379, 123);
+            this.contactNumber.TabIndex = 24;
+            this.contactNumber.TextboxValue = "";
+            this.contactNumber.value = false;
+            // 
+            // nationalaity
+            // 
+            this.nationalaity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
+            this.nationalaity.Location = new System.Drawing.Point(814, 184);
+            this.nationalaity.Name = "nationalaity";
+            this.nationalaity.PlaceholderName = "Nationalaity";
+            this.nationalaity.Size = new System.Drawing.Size(379, 123);
+            this.nationalaity.TabIndex = 23;
+            this.nationalaity.TextboxValue = "";
+            this.nationalaity.value = false;
+            // 
+            // birthdate
+            // 
+            this.birthdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
+            this.birthdate.date = new System.DateTime(2024, 4, 1, 20, 44, 12, 487);
+            this.birthdate.Location = new System.Drawing.Point(413, 184);
+            this.birthdate.Name = "birthdate";
+            this.birthdate.Size = new System.Drawing.Size(379, 123);
+            this.birthdate.TabIndex = 22;
+            // 
             // lastName
             // 
             this.lastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
@@ -132,16 +240,6 @@
             this.firstName.TextboxValue = "";
             this.firstName.value = false;
             // 
-            // isSeda
-            // 
-            this.isSeda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
-            this.isSeda.Location = new System.Drawing.Point(12, 336);
-            this.isSeda.Name = "isSeda";
-            this.isSeda.PlaceholderName = "Are you a Seda Student ?";
-            this.isSeda.Size = new System.Drawing.Size(379, 123);
-            this.isSeda.TabIndex = 18;
-            this.isSeda.TextboxValue = -1;
-            // 
             // gender
             // 
             this.gender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
@@ -163,89 +261,6 @@
             this.prnNumber.TextboxValue = "";
             this.prnNumber.value = false;
             // 
-            // birthdate
-            // 
-            this.birthdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
-            this.birthdate.date = new System.DateTime(2024, 4, 1, 20, 44, 12, 487);
-            this.birthdate.Location = new System.Drawing.Point(413, 184);
-            this.birthdate.Name = "birthdate";
-            this.birthdate.Size = new System.Drawing.Size(379, 123);
-            this.birthdate.TabIndex = 22;
-            // 
-            // nationalaity
-            // 
-            this.nationalaity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
-            this.nationalaity.Location = new System.Drawing.Point(814, 184);
-            this.nationalaity.Name = "nationalaity";
-            this.nationalaity.PlaceholderName = "Nationalaity";
-            this.nationalaity.Size = new System.Drawing.Size(379, 123);
-            this.nationalaity.TabIndex = 23;
-            this.nationalaity.TextboxValue = "";
-            this.nationalaity.value = false;
-            // 
-            // contactNumber
-            // 
-            this.contactNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
-            this.contactNumber.Location = new System.Drawing.Point(1216, 184);
-            this.contactNumber.Name = "contactNumber";
-            this.contactNumber.PlaceholderName = "Contact Number";
-            this.contactNumber.Size = new System.Drawing.Size(379, 123);
-            this.contactNumber.TabIndex = 24;
-            this.contactNumber.TextboxValue = "";
-            this.contactNumber.value = false;
-            // 
-            // personalEmail
-            // 
-            this.personalEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
-            this.personalEmail.Location = new System.Drawing.Point(413, 336);
-            this.personalEmail.Name = "personalEmail";
-            this.personalEmail.PlaceholderName = "Personal Email Id";
-            this.personalEmail.Size = new System.Drawing.Size(379, 123);
-            this.personalEmail.TabIndex = 25;
-            this.personalEmail.TextboxValue = "";
-            this.personalEmail.value = false;
-            // 
-            // alternateNumber
-            // 
-            this.alternateNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
-            this.alternateNumber.Location = new System.Drawing.Point(814, 336);
-            this.alternateNumber.Name = "alternateNumber";
-            this.alternateNumber.PlaceholderName = "Alternate Contact Number";
-            this.alternateNumber.Size = new System.Drawing.Size(379, 123);
-            this.alternateNumber.TabIndex = 26;
-            this.alternateNumber.TextboxValue = "";
-            this.alternateNumber.value = false;
-            // 
-            // adharCardNumber
-            // 
-            this.adharCardNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
-            this.adharCardNumber.Location = new System.Drawing.Point(1216, 336);
-            this.adharCardNumber.Name = "adharCardNumber";
-            this.adharCardNumber.PlaceholderName = "Adhar Card Number";
-            this.adharCardNumber.Size = new System.Drawing.Size(379, 123);
-            this.adharCardNumber.TabIndex = 27;
-            this.adharCardNumber.TextboxValue = "";
-            this.adharCardNumber.value = false;
-            // 
-            // pancardNumber
-            // 
-            this.pancardNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(122)))), ((int)(((byte)(250)))));
-            this.pancardNumber.Location = new System.Drawing.Point(12, 486);
-            this.pancardNumber.Name = "pancardNumber";
-            this.pancardNumber.PlaceholderName = "Pancard Number";
-            this.pancardNumber.Size = new System.Drawing.Size(379, 123);
-            this.pancardNumber.TabIndex = 28;
-            this.pancardNumber.TextboxValue = "";
-            this.pancardNumber.value = false;
-            // 
-            // RenderPanel
-            // 
-            this.RenderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RenderPanel.Location = new System.Drawing.Point(0, 0);
-            this.RenderPanel.Name = "RenderPanel";
-            this.RenderPanel.Size = new System.Drawing.Size(1607, 861);
-            this.RenderPanel.TabIndex = 29;
-            // 
             // FormPersonalDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -263,14 +278,15 @@
             this.Controls.Add(this.lastName);
             this.Controls.Add(this.middleName);
             this.Controls.Add(this.firstName);
-            this.Controls.Add(this.isSeda);
             this.Controls.Add(this.gender);
             this.Controls.Add(this.prnNumber);
             this.Controls.Add(this.bottonPanel);
             this.Controls.Add(this.RenderPanel);
             this.Name = "FormPersonalDetails";
             this.Text = "Personal Details";
+            this.Load += new System.EventHandler(this.FormPersonalDetails_Load);
             this.bottonPanel.ResumeLayout(false);
+            this.RenderPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -293,5 +309,6 @@
         private FontAwesome.Sharp.IconButton iconEdit;
         private FontAwesome.Sharp.IconButton iconSave;
         private System.Windows.Forms.Panel RenderPanel;
+        private ComboBoxWithLabel branchTextbox;
     }
 }

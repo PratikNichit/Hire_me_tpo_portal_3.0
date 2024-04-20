@@ -184,10 +184,33 @@ namespace Hire_me_tpo_portal_3._0
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            // insert into query 
-            this.Hide();
-            Form1 form1 = new Form1();
-            form1.Show();
+
+            insertUser();
+
+            using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
+            {
+                connection.Open();
+                var parameters = new { email = SignInEmail.Text, pass = SignInPassword.Text };
+                var user = connection.Query<Users>("hire_me.get_login_creads", parameters, commandType: CommandType.StoredProcedure);
+                foreach (var user_data in user)
+                {
+                      this.Hide();
+                      Form1 form1 = new Form1(user_data);
+                      form1.Show();
+                }
+
+            }
+
+        }
+
+        public void insertUser()
+        {
+            using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
+            {
+                connection.Open();
+                var parameters = new { email_id = SignInEmail.Text, password = SignInPassword.Text, key_value = long.Parse(key.Text), user_type = SignInType.Text };
+                var user = connection.Query<Users>("hire_me.create_user", parameters, commandType: CommandType.StoredProcedure);
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)

@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Dapper;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -14,10 +17,16 @@ namespace Hire_me_tpo_portal_3._0.Forms
     {
         // fields 
         private bool _isEnabled = false;
-        public FormAddressDetails()
+        public Users user;
+        public PersonalData personaldata;
+        public FormAddressDetails(Users user,PersonalData personaldata)
         {
+            this.user = user;
             InitializeComponent();
             disableAll();
+            this.user = user;
+            this.personaldata = personaldata;
+            loadData();
         }
 
         private void iconEdit_Click(object sender, EventArgs e)
@@ -54,7 +63,26 @@ namespace Hire_me_tpo_portal_3._0.Forms
 
         private void iconSave_Click(object sender, EventArgs e)
         {
-            // insert into query
+            using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
+            {
+                connection.Open();
+                var parameters = new
+                {
+                     prn_number = user.key_value,
+                     current = currentAddress.Text,
+                     permanent = permanentAddress.Text
+                };
+                connection.Execute("hire_me.add_address_details", parameters, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void loadData()
+        {
+            if(personaldata != null)
+            {
+                permanentAddress.Text = personaldata.permanent_address;
+                currentAddress.Text = personaldata.current_address;
+            }
         }
     }
 }
