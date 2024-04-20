@@ -70,15 +70,6 @@ namespace Hire_me_tpo_portal_3._0.Forms
 
         private void iconSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-               pursingYear.Text+" "+
-               currentBackLogs.Value+" "+
-               deadBacklogs.Value+" "+
-               currentCGPA.Text+" "+
-               pursingInternship.Text+" "+
-               isPlaced.Text
-            );
-
             using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
             {
                 connection.Open();
@@ -94,6 +85,8 @@ namespace Hire_me_tpo_portal_3._0.Forms
                 };
                 connection.Execute("hire_me.add_academic_details", parameters, commandType: CommandType.StoredProcedure);
             }
+
+            MessageBox.Show("Data Uploaded successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // form on load 

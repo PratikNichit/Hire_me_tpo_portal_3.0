@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Google.Protobuf;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -123,7 +125,7 @@ namespace Hire_me_tpo_portal_3._0.Forms
                 connection.Execute("hire_me.update_students_personal_details", parameters, commandType: CommandType.StoredProcedure);
             }
 
-            MessageBox.Show("Data Updated Successfully");
+            MessageBox.Show("Data Uploaded successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
 
@@ -137,7 +139,7 @@ namespace Hire_me_tpo_portal_3._0.Forms
                 lastName.TextboxValue = personaldata.last_name;
                 branchTextbox.selectIndex = int.Parse(personaldata.branch_name)-1;
                 gender.TextboxValue = personaldata.gender;
-                birthdate.date = DateTime.Parse(personaldata.birth_date);
+                birthdate.date = personaldata.birth_date;
                 nationalaity.TextboxValue = personaldata.nationality;
                 contactNumber.TextboxValue = personaldata.contact_no.ToString();
                 isSeda.TextboxValue = personaldata.is_seda;

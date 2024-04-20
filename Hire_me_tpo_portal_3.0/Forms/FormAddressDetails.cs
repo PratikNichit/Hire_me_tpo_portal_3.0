@@ -74,6 +74,8 @@ namespace Hire_me_tpo_portal_3._0.Forms
                 };
                 connection.Execute("hire_me.add_address_details", parameters, commandType: CommandType.StoredProcedure);
             }
+
+            MessageBox.Show("Data Uploaded successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void loadData()

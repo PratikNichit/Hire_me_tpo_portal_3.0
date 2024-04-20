@@ -1,8 +1,10 @@
 ﻿using Dapper;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.X509;
+using Org.BouncyCastle.Asn1.X509.SigI;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
@@ -25,6 +27,7 @@ namespace Hire_me_tpo_portal_3._0.Forms
             this.user = user;
             InitializeComponent();
             DisableAll();
+            loadData(user);
         }
 
         private void FormPastQualification_Load(object sender, EventArgs e)
@@ -109,6 +112,60 @@ namespace Hire_me_tpo_portal_3._0.Forms
                     passing_year = educationCard3.passingYear
                 };
                 connection.Execute("hire_me.add_past_qualifaction", parameters, commandType: CommandType.StoredProcedure);
+            }
+
+            MessageBox.Show("Data Uploaded successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void loadData(Users user)
+        {
+            using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
+            {
+                connection.Open();
+                var parameters = new { prn_number = user.key_value };
+                var pastQualifactions = connection.Query<PastQualifaction>("hire_me.get_past_qualifaction;", parameters, commandType: CommandType.StoredProcedure);
+                if(pastQualifactions == null)
+                {
+                    return;
+                }
+                pastQualifactions = pastQualifactions.ToList();
+                int count = 1;
+                foreach (PastQualifaction pastQualifaction in pastQualifactions)
+                {
+                    if (count == 1)
+                    {
+                        educationCard1.education = pastQualifaction.education;
+                        educationCard1.university = pastQualifaction.university;
+                        educationCard1.institueName = pastQualifaction.institute_name;
+                        educationCard1.percentage = pastQualifaction.percentage;
+                        educationCard1.passingYear = pastQualifaction.passing_year;
+                    }
+
+                    if (count == 2)
+                    {
+                        educationCard2.education = pastQualifaction.education;
+                        educationCard2.university = pastQualifaction.university;
+                        educationCard2.institueName = pastQualifaction.institute_name;
+                        educationCard2.percentage = pastQualifaction.percentage;
+                        educationCard2.passingYear = pastQualifaction.passing_year;
+                    }
+
+                    if (count == 3)
+                    {
+                        educationCard3.education = pastQualifaction.education;
+                        educationCard3.university = pastQualifaction.university;
+                        educationCard3.institueName = pastQualifaction.institute_name;
+                        educationCard3.percentage = pastQualifaction.percentage;
+                        educationCard3.passingYear = pastQualifaction.passing_year;
+                    }
+
+                    if (count > 3)
+                    {
+                        count = 0;
+                    }
+                    count++;
+                }
+               
             }
         }
     }

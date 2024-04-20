@@ -45,12 +45,13 @@
             // 
             // datepicker
             // 
-            this.datepicker.CustomFormat = "YYYY-mm-DD";
+            this.datepicker.CustomFormat = "yyyy-MM-dd";
             this.datepicker.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datepicker.Location = new System.Drawing.Point(26, 58);
+            this.datepicker.Location = new System.Drawing.Point(29, 58);
             this.datepicker.Name = "datepicker";
-            this.datepicker.Size = new System.Drawing.Size(328, 34);
+            this.datepicker.Size = new System.Drawing.Size(326, 34);
             this.datepicker.TabIndex = 6;
+            this.datepicker.Value = new System.DateTime(2024, 4, 20, 11, 40, 0, 0);
             // 
             // DatePickerWithLabel
             // 

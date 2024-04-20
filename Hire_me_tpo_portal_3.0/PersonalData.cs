@@ -14,7 +14,7 @@ namespace Hire_me_tpo_portal_3._0
       public string last_name { get; set; }
       public string branch_name {  get; set; }
       public int gender { get; set; }
-      public string birth_date {  get; set; }
+      public DateTime birth_date {  get; set; }
       public string nationality {  get; set; }
       public long contact_no {  get; set; }
       public int is_seda {  get; set; }

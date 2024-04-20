@@ -267,6 +267,7 @@
     <Compile Include="OneLineTextboxWithLabel.Designer.cs">
       <DependentUpon>OneLineTextboxWithLabel.cs</DependentUpon>
     </Compile>
+    <Compile Include="PastQualifaction.cs" />
     <Compile Include="PersonalData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
