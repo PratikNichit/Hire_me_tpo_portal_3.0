@@ -57,8 +57,17 @@ namespace Hire_me_tpo_portal_3._0
                     if (email_id.Text == user_data.email_id && password.Text == user_data.password)
                     {
                         this.Hide();
-                        Form1 form1 = new Form1(user_data);
-                        form1.Show();
+                        if(user_data.user_type == "Student")
+                        {
+                            Form1 form1 = new Form1(user_data);
+                            form1.Show();
+                        }
+                        else
+                        {
+                            AdminForms.AdminHomePage adminHomePage = new AdminForms.AdminHomePage();
+                            adminHomePage.Show();
+                        }
+
                     }
                     else
                     {

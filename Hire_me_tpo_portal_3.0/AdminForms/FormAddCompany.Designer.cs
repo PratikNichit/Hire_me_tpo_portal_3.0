@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddCompany));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.iconAdd = new FontAwesome.Sharp.IconButton();
             this.about = new Hire_me_tpo_portal_3._0.OneLineTextboxWithLabel();
             this.address = new Hire_me_tpo_portal_3._0.OneLineTextboxWithLabel();
             this.maxPackage = new Hire_me_tpo_portal_3._0.OneLineTextboxWithLabel();
@@ -44,6 +40,10 @@
             this.industryType = new Hire_me_tpo_portal_3._0.oneLineComboBox();
             this.location = new Hire_me_tpo_portal_3._0.OneLineTextboxWithLabel();
             this.companyName = new Hire_me_tpo_portal_3._0.OneLineTextboxWithLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.iconAdd = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,60 +68,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1397, 482);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(110)))), ((int)(((byte)(254)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1395, 64);
-            this.panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Companies\'s Information";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.iconAdd);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 785);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1607, 76);
-            this.panel3.TabIndex = 6;
-            // 
-            // iconAdd
-            // 
-            this.iconAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.iconAdd.FlatAppearance.BorderSize = 0;
-            this.iconAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconAdd.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            this.iconAdd.IconColor = System.Drawing.Color.Black;
-            this.iconAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconAdd.Location = new System.Drawing.Point(1482, 14);
-            this.iconAdd.Margin = new System.Windows.Forms.Padding(5);
-            this.iconAdd.Name = "iconAdd";
-            this.iconAdd.Size = new System.Drawing.Size(110, 48);
-            this.iconAdd.TabIndex = 7;
-            this.iconAdd.Text = "Add";
-            this.iconAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconAdd.UseVisualStyleBackColor = false;
-            this.iconAdd.Click += new System.EventHandler(this.iconAdd_Click);
             // 
             // about
             // 
@@ -229,6 +175,60 @@
             this.companyName.Size = new System.Drawing.Size(655, 47);
             this.companyName.TabIndex = 1;
             this.companyName.Value = "";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(110)))), ((int)(((byte)(254)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1395, 64);
+            this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(25, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(277, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Companies\'s Information";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.iconAdd);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 785);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1607, 76);
+            this.panel3.TabIndex = 6;
+            // 
+            // iconAdd
+            // 
+            this.iconAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iconAdd.FlatAppearance.BorderSize = 0;
+            this.iconAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconAdd.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.iconAdd.IconColor = System.Drawing.Color.Black;
+            this.iconAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconAdd.Location = new System.Drawing.Point(1482, 14);
+            this.iconAdd.Margin = new System.Windows.Forms.Padding(5);
+            this.iconAdd.Name = "iconAdd";
+            this.iconAdd.Size = new System.Drawing.Size(110, 48);
+            this.iconAdd.TabIndex = 7;
+            this.iconAdd.Text = "Add";
+            this.iconAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconAdd.UseVisualStyleBackColor = false;
+            this.iconAdd.Click += new System.EventHandler(this.iconAdd_Click);
             // 
             // FormAddCompany
             // 

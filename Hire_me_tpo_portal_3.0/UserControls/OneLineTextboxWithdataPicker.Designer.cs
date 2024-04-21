@@ -1,6 +1,6 @@
 ﻿namespace Hire_me_tpo_portal_3._0
 {
-    partial class oneLineComboBox
+    partial class OneLineTextboxWithdataPicker
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,60 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.placeholder = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox = new System.Windows.Forms.ComboBox();
+            this.placeholder = new System.Windows.Forms.Label();
+            this.datePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
-            // 
-            // placeholder
-            // 
-            this.placeholder.AutoSize = true;
-            this.placeholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeholder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(159)))));
-            this.placeholder.Location = new System.Drawing.Point(15, 12);
-            this.placeholder.Name = "placeholder";
-            this.placeholder.Size = new System.Drawing.Size(151, 22);
-            this.placeholder.TabIndex = 2;
-            this.placeholder.Text = "Company\'s Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(271, 12);
+            this.label3.Location = new System.Drawing.Point(270, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 22);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 5;
             this.label3.Text = ":";
             // 
-            // comboBox
+            // placeholder
             // 
-            this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(293, 7);
-            this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(349, 33);
-            this.comboBox.TabIndex = 4;
+            this.placeholder.AutoSize = true;
+            this.placeholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placeholder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(159)))));
+            this.placeholder.Location = new System.Drawing.Point(14, 16);
+            this.placeholder.Name = "placeholder";
+            this.placeholder.Size = new System.Drawing.Size(151, 22);
+            this.placeholder.TabIndex = 4;
+            this.placeholder.Text = "Company\'s Name";
             // 
-            // oneLineComboBox
+            // datePicker1
+            // 
+            this.datePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.datePicker1.Location = new System.Drawing.Point(291, 16);
+            this.datePicker1.Name = "datePicker1";
+            this.datePicker1.Size = new System.Drawing.Size(349, 30);
+            this.datePicker1.TabIndex = 7;
+            // 
+            // OneLineTextboxWithdataPicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboBox);
+            this.Controls.Add(this.datePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.placeholder);
-            this.Name = "oneLineComboBox";
-            this.Size = new System.Drawing.Size(655, 47);
+            this.Name = "OneLineTextboxWithdataPicker";
+            this.Size = new System.Drawing.Size(655, 60);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label placeholder;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox;
+        private System.Windows.Forms.Label placeholder;
+        private System.Windows.Forms.DateTimePicker datePicker1;
     }
 }

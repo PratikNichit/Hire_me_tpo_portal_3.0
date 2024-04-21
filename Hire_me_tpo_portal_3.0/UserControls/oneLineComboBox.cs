@@ -15,6 +15,7 @@ namespace Hire_me_tpo_portal_3._0
         public oneLineComboBox()
         {
             InitializeComponent();
+            comboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         [Category("extra Properties")]
@@ -61,5 +62,11 @@ namespace Hire_me_tpo_portal_3._0
                 }
             }
         }
+
+        private void comboBox_Enter(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
+    
