@@ -9,16 +9,11 @@ namespace Hire_me_tpo_portal_3._0
 {
     public class CompanyInfo
     {
-        public int company_id {  get; set; }    
-        public string industry_type { get; set; }
-        public string name { get; set; }
-        public string compay_type {  get; set; }
-        public string location { get; set; }
-        public int offering_id { get; set; }
-        public string company_address { get; set; }
-        public string company_email_id {  get; set; }
-        public string min_package {  get; set; }
-        public string max_package { get; set; }
-        public string about {  get; set; }
+        public string Company_Name { get; set; }
+        public string Company_Location { get; set; }
+        public string Offerings { get; set; }
+        public string Minimum_Package {  get; set; }
+        public string Maximun_Package { get; set; }
+        public string About {  get; set; }
     }
 }

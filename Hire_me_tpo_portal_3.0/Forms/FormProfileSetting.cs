@@ -33,7 +33,7 @@ namespace Hire_me_tpo_portal_3._0.Forms
             forms.Add(new FormAcademics(user,personaldata1));
             forms.Add(new FormPastQualification(user));
             forms.Add(new FormAddressDetails(user,personaldata1));
-            forms.Add(new FormUploadCv());
+            forms.Add(new FormUploadCv(user));
             showCurrentFrom();
         }
 
@@ -46,7 +46,7 @@ namespace Hire_me_tpo_portal_3._0.Forms
             forms.Add(new FormAcademics(user, personaldata1));
             forms.Add(new FormPastQualification(user));
             forms.Add(new FormAddressDetails(user,personaldata1));
-            forms.Add(new FormUploadCv());
+            forms.Add(new FormUploadCv(user));
             showCurrentFrom();
         }
 

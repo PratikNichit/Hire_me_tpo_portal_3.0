@@ -146,7 +146,7 @@ namespace Hire_me_tpo_portal_3._0.AdminForms
         private void ExportData_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGcolors.color4);
-            openChidForm(new AdminForms.FormExportData());
+            openChidForm(new AdminForms.FormExportData(panelDesktop));
         }
 
         private void profileSetting_Click(object sender, EventArgs e)

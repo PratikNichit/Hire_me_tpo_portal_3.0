@@ -150,7 +150,7 @@ namespace Hire_me_tpo_portal_3._0
         private void sheheduled_companies_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGcolors.color2);
-            openChidForm(new Forms.FormSheheduledCompanies(user));
+            openChidForm(new Forms.FormSheheduledCompanies(user,panelDesktop));
         }
 
         private void companies_dashboard_Click(object sender, EventArgs e)

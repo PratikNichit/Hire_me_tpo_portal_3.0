@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using Dapper;
+using System.Reflection;
 
 namespace Hire_me_tpo_portal_3._0.Forms
 {
@@ -20,6 +21,8 @@ namespace Hire_me_tpo_portal_3._0.Forms
         {
             InitializeComponent();
             DataTable dt = new DataTable();
+
+
         }
 
         private void FormCompaniesDashboard_Load(object sender, EventArgs e)
@@ -32,10 +35,12 @@ namespace Hire_me_tpo_portal_3._0.Forms
             using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
             {
                 connection.Open();
-                var company = connection.Query<CompanyInfo>("SELECT * FROM company_info");
+                var company = connection.Query<CompanyInfo>("SELECT * FROM company_dashboard");
                 dataGridCompanies.DataSource =  company.ToList();
             }
 
         }
+
+
     }
 }

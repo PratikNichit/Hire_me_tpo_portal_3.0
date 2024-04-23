@@ -17,9 +17,16 @@ namespace Hire_me_tpo_portal_3._0
         //fields 
         public int vancancyId;
         public int companyId;
+        private Form currentChildForm;
+        private Panel panelDesktop;
         public Card()
         {
             InitializeComponent();
+        }
+        public Card(Panel panelDesktop)
+        {
+            InitializeComponent();
+            this.panelDesktop = panelDesktop;   
         }
 
         [Category("Extra Properties")]
@@ -140,6 +147,27 @@ namespace Hire_me_tpo_portal_3._0
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChidForm(new Forms.FormViewVacancyDetails(vancancyId,companyId,panelDesktop));
+        }
+
+        public void openChidForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(childForm);
+            panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

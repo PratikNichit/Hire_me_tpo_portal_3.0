@@ -17,10 +17,12 @@ namespace Hire_me_tpo_portal_3._0.Forms
     public partial class FormSheheduledCompanies : Form
     {
         public Users users;
-        public FormSheheduledCompanies(Users users)
+        private Panel panelDesktop;
+        public FormSheheduledCompanies(Users users, Panel panelDesktop)
         {
             InitializeComponent();
             this.users = users;
+            this.panelDesktop = panelDesktop;
         }
 
         private void FormSheheduledCompanies_Load(object sender, EventArgs e)
@@ -38,7 +40,7 @@ namespace Hire_me_tpo_portal_3._0.Forms
 
                 cards = cards.ToList();
                 foreach (var carddata in cards) {
-                    Card card = new Card();
+                    Card card = new Card(panelDesktop);
                     card.companyId = carddata.company_id;
                     card.vancancyId = carddata.vacany_id;
                     card.nameOfCompany = carddata.name;
