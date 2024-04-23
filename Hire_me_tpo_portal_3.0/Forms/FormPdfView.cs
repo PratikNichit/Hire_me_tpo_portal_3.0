@@ -17,6 +17,7 @@ namespace Hire_me_tpo_portal_3._0.Forms
         {
             InitializeComponent();
             LoadPdfFile(filePath);
+
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace Hire_me_tpo_portal_3._0.Forms
 
         private void LoadPdfFile(string filePath)
         {
-
+            pdfViewer.LoadFromFile(filePath);
         }
     }
 }

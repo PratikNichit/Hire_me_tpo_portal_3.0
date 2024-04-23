@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.close = new System.Windows.Forms.Button();
+            this.pdfViewer = new Spire.PdfViewer.Forms.PdfViewer();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,11 +54,29 @@
             this.close.UseVisualStyleBackColor = true;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
+            // pdfViewer
+            // 
+            this.pdfViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pdfViewer.FindTextHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))), ((int)(((byte)(218)))));
+            this.pdfViewer.FormFillEnabled = false;
+            this.pdfViewer.IgnoreCase = false;
+            this.pdfViewer.IsToolBarVisible = true;
+            this.pdfViewer.Location = new System.Drawing.Point(0, 56);
+            this.pdfViewer.MultiPagesThreshold = 60;
+            this.pdfViewer.Name = "pdfViewer";
+            this.pdfViewer.OnRenderPageExceptionEvent = null;
+            this.pdfViewer.Size = new System.Drawing.Size(1571, 711);
+            this.pdfViewer.TabIndex = 2;
+            this.pdfViewer.Text = "pdfViewer1";
+            this.pdfViewer.Threshold = 60;
+            this.pdfViewer.ViewerBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            // 
             // FormPdfView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1571, 767);
+            this.Controls.Add(this.pdfViewer);
             this.Controls.Add(this.panel1);
             this.Name = "FormPdfView";
             this.Text = "FormPdfView";
@@ -69,5 +88,6 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button close;
+        private Spire.PdfViewer.Forms.PdfViewer pdfViewer;
     }
 }
