@@ -193,6 +193,7 @@
     <Compile Include="Models\ApplicationData.cs" />
     <Compile Include="Models\Branches.cs" />
     <Compile Include="Models\Companies.cs" />
+    <Compile Include="Models\CriteriaData.cs" />
     <Compile Include="Models\ResumeLink.cs" />
     <Compile Include="Models\VacancyDataForCard.cs" />
     <Compile Include="Models\VacancyInfo.cs" />

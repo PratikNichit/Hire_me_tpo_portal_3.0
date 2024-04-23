@@ -143,6 +143,7 @@
             this.ApplyButton.Text = "Apply Now";
             this.ApplyButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ApplyButton.UseVisualStyleBackColor = false;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // iconStatus
             // 

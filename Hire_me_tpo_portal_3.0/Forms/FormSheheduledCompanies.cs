@@ -40,7 +40,7 @@ namespace Hire_me_tpo_portal_3._0.Forms
 
                 cards = cards.ToList();
                 foreach (var carddata in cards) {
-                    Card card = new Card(panelDesktop);
+                    Card card = new Card(panelDesktop,users,false);
                     card.companyId = carddata.company_id;
                     card.vancancyId = carddata.vacany_id;
                     card.nameOfCompany = carddata.name;

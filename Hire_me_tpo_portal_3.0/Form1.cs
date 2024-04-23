@@ -162,7 +162,7 @@ namespace Hire_me_tpo_portal_3._0
         private void applied_companies_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGcolors.color4);
-            openChidForm(new Forms.FormAppliedCompanies(user));
+            openChidForm(new Forms.FormAppliedCompanies(user,panelDesktop));
         }
 
         private void profile_Click(object sender, EventArgs e)
