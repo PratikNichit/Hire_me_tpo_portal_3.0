@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.Logout = new FontAwesome.Sharp.IconButton();
             this.AboutPanel = new System.Windows.Forms.Panel();
             this.aboutType = new System.Windows.Forms.Label();
             this.userIcon = new FontAwesome.Sharp.IconPictureBox();
@@ -65,6 +66,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(110)))), ((int)(((byte)(254)))));
+            this.panelMenu.Controls.Add(this.Logout);
             this.panelMenu.Controls.Add(this.AboutPanel);
             this.panelMenu.Controls.Add(this.profile);
             this.panelMenu.Controls.Add(this.applied_companies);
@@ -77,6 +79,29 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(295, 918);
             this.panelMenu.TabIndex = 1;
+            // 
+            // Logout
+            // 
+            this.Logout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Logout.FlatAppearance.BorderSize = 0;
+            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout.ForeColor = System.Drawing.Color.White;
+            this.Logout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.Logout.IconColor = System.Drawing.Color.White;
+            this.Logout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Logout.IconSize = 32;
+            this.Logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Logout.Location = new System.Drawing.Point(0, 782);
+            this.Logout.Name = "Logout";
+            this.Logout.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.Logout.Size = new System.Drawing.Size(295, 60);
+            this.Logout.TabIndex = 6;
+            this.Logout.Text = "Logout";
+            this.Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Logout.UseVisualStyleBackColor = true;
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // AboutPanel
             // 
@@ -421,6 +446,7 @@
         private FontAwesome.Sharp.IconPictureBox userIcon;
         private System.Windows.Forms.Label aboutType;
         private System.Windows.Forms.Label aboutEmail;
+        private FontAwesome.Sharp.IconButton Logout;
     }
 }
 

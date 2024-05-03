@@ -14,7 +14,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Hire_me_tpo_portal_3._0
-{
+{   
     public partial class LoginPage : Form
     {
         //fields
@@ -65,6 +65,7 @@ namespace Hire_me_tpo_portal_3._0
                         else
                         {
                             AdminForms.AdminHomePage adminHomePage = new AdminForms.AdminHomePage();
+                            // code to insert
                             adminHomePage.Show();
                         }
 

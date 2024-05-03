@@ -28,7 +28,7 @@ namespace Hire_me_tpo_portal_3._0.Forms
         {
             InitializeComponent();
             this.vacancyId = vacancyId;
-            this.companyId = companyId;
+            this.companyId = vacancyId;
             this.panelDesktop = panelDesktop;
             loadDataIntoForm();
             loadDataIntoView();
@@ -44,6 +44,7 @@ namespace Hire_me_tpo_portal_3._0.Forms
             using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
             {
                 connection.Open();
+                // MessageBox.Show(vacancyId.ToString(), vacancyId.ToString());
                 var parameters = new { id = 5, companyId = 8 };
                 var vacancyDatas = connection.Query<VacancyDataForCard>("hire_me.get_vacancy_by_id", parameters, commandType: CommandType.StoredProcedure);
                 vacancyDatas = vacancyDatas.ToList();

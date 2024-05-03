@@ -16,5 +16,10 @@ namespace Hire_me_tpo_portal_3._0.Forms
         {
             InitializeComponent();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

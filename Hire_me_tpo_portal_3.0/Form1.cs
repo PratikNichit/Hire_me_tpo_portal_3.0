@@ -211,5 +211,10 @@ namespace Hire_me_tpo_portal_3._0
             else
                 WindowState = FormWindowState.Normal;
         }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Application.Restart();  
+        }
     }
 }
